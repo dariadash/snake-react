@@ -1,0 +1,67 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 381px;
+    border: 1px solid white;
+}
+
+.stats {
+    padding: 20px;
+}
+
+.win-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    height: 640px;
+    width: 1040px;
+}
+
+.fail-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 100px;
+    z-index: 10;
+}
+
+.cell,
+.snake,
+.food {
+    width: 30px;
+    height: 30px;
+}
+
+.cell {
+    border: 1px solid white;
+    position: relative;
+}
+
+.snake {
+    background-color: #61dafb;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.food {
+    background-image: url(./assets/react.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: spin infinite 20s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

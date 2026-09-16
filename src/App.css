@@ -1,0 +1,60 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.instruction-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.instruction-trigger {
+  cursor: pointer;
+  color: #888;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+}
+
+.instruction-trigger:hover {
+  color: #fff;
+}
+
+.card {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: max-content;
+  max-width: 280px;
+  margin-bottom: 12px;
+  padding: 1em 1.2em;
+
+
+  background-color: rgba(255, 255, 255, 0.041);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9em;
+  line-height: 1.4;
+  text-align: left;
+
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 12px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.instruction-wrapper:hover .card {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
