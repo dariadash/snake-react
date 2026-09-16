@@ -1,9 +1,9 @@
-import './App.css'
+import './Instruction.css'
 
-function App() {
+export const Instruction = () => {
   return (
     <>
-      <h1>Snake React</h1>
+      <h1>Snake Game</h1>
       <div className="instruction-wrapper">
         <span className="instruction-trigger">инструкция</span>
         <div className="card">
@@ -17,5 +17,3 @@ function App() {
     </>
   )
 }
-
-export default App

@@ -1,3 +1,10 @@
+# Snake Game🐍
+
+A classic Snake game built with React + Zustand — just for fun.
+In this game, you control a snake, eat food to grow, and score points.
+
+Have fun and enjoy the game!
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
