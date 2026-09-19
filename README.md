@@ -1,4 +1,5 @@
 # Snake Game🐍
+[snake-react-nine.vercel.app](https://snake-react-nine.vercel.app/)
 
 A classic Snake game built with React + Zustand — just for fun.
 In this game, you control a snake, eat food to grow, and score points.
