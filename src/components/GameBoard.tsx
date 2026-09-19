@@ -1,6 +1,8 @@
 import ChromaKeyVideo from "chromakey-video-react"
 import { GRID_SIZE } from "../const"
 import { useSnakeStore } from "../store"
+import explosionVideo from "../assets/deltarune_explosion_greenscreen.mp4"
+import explosionAudio from "../assets/deltarune_explosion_greenscreen.mp3"
 
 export const GameBoard = () => {
     const snakeState = useSnakeStore((s) => s.snakeState)
@@ -23,14 +25,14 @@ export const GameBoard = () => {
                             selfEatCoord.every((val, idx) => val === [i, j][idx]) &&
                             <>
                                 <ChromaKeyVideo
-                                    src="src/assets/deltarune_explosion_greenscreen.mp4"
+                                    src={explosionVideo}
                                     color="#00ff00"
                                     similarity={0.4}
                                     despill={true}
                                     className='fail-video'
                                     loop={false}
                                 />
-                                <iframe src="src/assets/deltarune_explosion_greenscreen.mp3" allow="autoplay" style={{ display: "none" }}></iframe>
+                                <iframe src={explosionAudio} allow="autoplay" style={{ display: "none" }}></iframe>
                             </>
                         }
                         {foodCoords.find((st) => st.length === [i, j].length &&

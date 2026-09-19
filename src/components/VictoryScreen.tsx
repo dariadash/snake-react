@@ -1,5 +1,7 @@
 import { ChromaKeyVideo } from 'chromakey-video-react'
 import { useGameStore } from '../store'
+import victoryVideo from '../assets/Happy_Wheels_victory_green_screen.mp4'
+import victoryAudio from '../assets/Happy_Wheels_victory_green_screen.mp3'
 
 export const VictoryScreen = () => {
   const gameWin = useGameStore((s) => s.gameWin)
@@ -9,13 +11,13 @@ export const VictoryScreen = () => {
   return (
     <>
       <ChromaKeyVideo
-        src="src/assets/Happy_Wheels_victory_green_screen.mp4"
+        src={victoryVideo}
         color="#00ff00"
         similarity={0.4}
         despill={true}
         className='win-video'
       />
-      <iframe src="src/assets/Happy_Wheels_victory_green_screen.mp3" allow="autoplay" style={{ display: "none" }}></iframe>
+      <iframe src={victoryAudio} allow="autoplay" style={{ display: "none" }}></iframe>
     </>
   )
 }
